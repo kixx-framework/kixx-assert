@@ -184,6 +184,15 @@ export function isFunction(value) {
 }
 
 /**
+ * Determines if the given value is an object but not null.
+ * @param {*} value - The value to check.
+ * @returns {boolean} True if the value is an object and not null, false otherwise.
+ */
+export function isObjectNotNull(value) {
+    return typeof value === 'object' && value !== null;
+}
+
+/**
  * Determines if the given value is a plain object.
  * A plain object is defined as an object that either has no prototype or has a constructor named "Object".
  * @param {*} value - The value to check.

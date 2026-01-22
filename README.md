@@ -145,6 +145,19 @@ isFunction(() => {}) // true
 isFunction('foo') // false
 ```
 
+### isObjectNotNull
+Detects any object that is not null. Returns true for plain objects, arrays, class instances, Date, RegExp, Map, Set, etc. Returns false for null and all non-object types.
+
+```js
+isObjectNotNull(null) // false
+isObjectNotNull(undefined) // false
+isObjectNotNull('foo') // false
+isObjectNotNull({}) // true
+isObjectNotNull([]) // true
+isObjectNotNull(new Date()) // true
+isObjectNotNull(new Map()) // true
+```
+
 ### isPlainObject
 ```js
 isPlainObject(new Date()) // false
