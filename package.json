@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kixxauth/kixx-assert.git"
+    "url": "git+https://github.com/kixx-framework/kixx-assert.git"
   },
   "files": [
     "mod.js"
@@ -30,7 +30,7 @@
   "author": "Kris Walker (www.kriswalker.me)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kixxauth/kixx-assert/issues"
+    "url": "https://github.com/kixx-framework/kixx-assert/issues"
   },
-  "homepage": "https://github.com/kixxauth/kixx-assert#readme"
+  "homepage": "https://github.com/kixx-framework/kixx-assert#readme"
 }
