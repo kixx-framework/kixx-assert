@@ -4,7 +4,7 @@ A JavaScript library for creating robust ES6 code.
 
 Contains test functions like `isNumberNotNaN()` which return Booleans, and assertion functions like `assertEqual()` which throw an AssertionError if the condition(s) fail.
 
-Created by [Kris Walker](https://www.kriswalker.me) 2017 - 2025.
+Created by [Kris Walker](https://www.kriswalker.me) 2017 - 2026.
 
 ## Environment Support
 
