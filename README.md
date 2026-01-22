@@ -464,6 +464,6 @@ assertIsZero(1, 'What happens when we pass in 1?'); // Throws AssertionError
 
 Copyright and License
 ---------------------
-Copyright: (c) 2017 - 2025 by Kris Walker (www.kriswalker.me)
+Copyright: (c) 2017 - 2026 by Kris Walker (www.kriswalker.me)
 
 Unless otherwise indicated, all source code is licensed under the MIT license. See LICENSE for details.
