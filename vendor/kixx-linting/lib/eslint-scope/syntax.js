@@ -1,0 +1,93 @@
+/**
+ * @module syntax
+ * @description
+ * ECMAScript syntax node type constants. These string constants match the
+ * AST node types used by parsers like acorn, espree, and babel.
+ * Used throughout scope analysis to identify and handle different node types.
+ */
+
+/**
+ * AST node type constants for all ECMAScript constructs.
+ * @type {Object}
+ * @readonly
+ */
+const Syntax = Object.freeze({
+    AssignmentExpression: "AssignmentExpression",
+    AssignmentPattern: "AssignmentPattern",
+    ArrayExpression: "ArrayExpression",
+    ArrayPattern: "ArrayPattern",
+    ArrowFunctionExpression: "ArrowFunctionExpression",
+    AwaitExpression: "AwaitExpression",
+    BlockStatement: "BlockStatement",
+    BinaryExpression: "BinaryExpression",
+    BreakStatement: "BreakStatement",
+    CallExpression: "CallExpression",
+    CatchClause: "CatchClause",
+    ChainExpression: "ChainExpression",
+    ClassBody: "ClassBody",
+    ClassDeclaration: "ClassDeclaration",
+    ClassExpression: "ClassExpression",
+    ComprehensionBlock: "ComprehensionBlock",
+    ComprehensionExpression: "ComprehensionExpression",
+    ConditionalExpression: "ConditionalExpression",
+    ContinueStatement: "ContinueStatement",
+    DebuggerStatement: "DebuggerStatement",
+    DirectiveStatement: "DirectiveStatement",
+    DoWhileStatement: "DoWhileStatement",
+    EmptyStatement: "EmptyStatement",
+    ExportAllDeclaration: "ExportAllDeclaration",
+    ExportDefaultDeclaration: "ExportDefaultDeclaration",
+    ExportNamedDeclaration: "ExportNamedDeclaration",
+    ExportSpecifier: "ExportSpecifier",
+    ExpressionStatement: "ExpressionStatement",
+    ForStatement: "ForStatement",
+    ForInStatement: "ForInStatement",
+    ForOfStatement: "ForOfStatement",
+    FunctionDeclaration: "FunctionDeclaration",
+    FunctionExpression: "FunctionExpression",
+    GeneratorExpression: "GeneratorExpression",
+    Identifier: "Identifier",
+    IfStatement: "IfStatement",
+    ImportExpression: "ImportExpression",
+    ImportDeclaration: "ImportDeclaration",
+    ImportDefaultSpecifier: "ImportDefaultSpecifier",
+    ImportNamespaceSpecifier: "ImportNamespaceSpecifier",
+    ImportSpecifier: "ImportSpecifier",
+    Literal: "Literal",
+    LabeledStatement: "LabeledStatement",
+    LogicalExpression: "LogicalExpression",
+    MemberExpression: "MemberExpression",
+    MetaProperty: "MetaProperty",
+    MethodDefinition: "MethodDefinition",
+    ModuleSpecifier: "ModuleSpecifier",
+    NewExpression: "NewExpression",
+    ObjectExpression: "ObjectExpression",
+    ObjectPattern: "ObjectPattern",
+    PrivateIdentifier: "PrivateIdentifier",
+    Program: "Program",
+    Property: "Property",
+    PropertyDefinition: "PropertyDefinition",
+    RestElement: "RestElement",
+    ReturnStatement: "ReturnStatement",
+    SequenceExpression: "SequenceExpression",
+    SpreadElement: "SpreadElement",
+    StaticBlock: "StaticBlock",
+    Super: "Super",
+    SwitchStatement: "SwitchStatement",
+    SwitchCase: "SwitchCase",
+    TaggedTemplateExpression: "TaggedTemplateExpression",
+    TemplateElement: "TemplateElement",
+    TemplateLiteral: "TemplateLiteral",
+    ThisExpression: "ThisExpression",
+    ThrowStatement: "ThrowStatement",
+    TryStatement: "TryStatement",
+    UnaryExpression: "UnaryExpression",
+    UpdateExpression: "UpdateExpression",
+    VariableDeclaration: "VariableDeclaration",
+    VariableDeclarator: "VariableDeclarator",
+    WhileStatement: "WhileStatement",
+    WithStatement: "WithStatement",
+    YieldExpression: "YieldExpression",
+});
+
+export default Syntax;

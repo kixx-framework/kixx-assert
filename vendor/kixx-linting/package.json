@@ -1,0 +1,36 @@
+{
+    "name": "kixx-linting",
+    "version": "1.0.0",
+    "description": "A lightweight JavaScript linter for Kixx modules, components, plugins, and frontend stuff.",
+    "type": "module",
+    "main": "./mod.js",
+    "exports": {
+        ".": "./mod.js"
+    },
+    "engines": {
+        "node": ">=24"
+    },
+    "scripts": {
+        "test": "node lint.js && node run-tests.js"
+    },
+    "homepage": "https://www.kixx.dev/",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kixx-framework/kixx-linting.git"
+    },
+    "bugs": {
+        "url": "https://github.com/kixx-framework/kixx-linting/issues"
+    },
+    "author": "Kris Walker (www.kriswalker.me)",
+    "license": "MIT",
+    "files": [
+        "lib/",
+        "lint.js",
+        "mod.js"
+    ],
+    "keywords": [
+        "kixx",
+        "javascript",
+        "linting"
+    ]
+}
