@@ -1,7 +1,7 @@
 import {
     AssertionError,
     assertEqual,
-    hasOwn
+    hasOwn,
 } from '../mod.js';
 
 import { getValues } from './values.js';
@@ -65,7 +65,7 @@ export default function test_hasOwn() {
         } catch (err) {
             throw new AssertionError(
                 `Unexpected error calling target function ${ messageSuffix }`,
-                { cause: err }
+                { cause: err },
             );
         }
     });

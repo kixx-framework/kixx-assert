@@ -1,6 +1,6 @@
 import {
     assertEqual,
-    assertDefined
+    assertDefined,
 } from '../mod.js';
 
 import { assertThrowsAssertionError } from './helpers.js';
@@ -16,7 +16,7 @@ export default function test_assertDefined() {
     } catch (err) {
         assertEqual(
             'of undefined (Expected undefined to be defined)',
-            err.message
+            err.message,
         );
     }
 

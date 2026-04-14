@@ -1,7 +1,7 @@
 import {
     AssertionError,
     toFriendlyString,
-    assertEqual
+    assertEqual,
 } from '../mod.js';
 
 import { assertThrowsErrorMessage } from './helpers.js';
@@ -14,12 +14,12 @@ export default function test_assertEqual() {
     tests.forEach(([ a, b, messageSuffix, expectedToPass ]) => {
         if (typeof messageSuffix !== 'string') {
             throw new AssertionError(
-                `Expected messageSuffix ${ toFriendlyString(messageSuffix) } to be a String`
+                `Expected messageSuffix ${ toFriendlyString(messageSuffix) } to be a String`,
             );
         }
         if (typeof expectedToPass !== 'boolean') {
             throw new AssertionError(
-                `Expected expectedToPass ${ toFriendlyString(expectedToPass) } to be a Boolean`
+                `Expected expectedToPass ${ toFriendlyString(expectedToPass) } to be a Boolean`,
             );
         }
 

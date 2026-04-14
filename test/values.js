@@ -26,7 +26,7 @@ export function funcDef() {
 }
 
 export function getValues(mapper, _undefined) {
-    /* eslint-disable brace-style, array-bracket-spacing, */
+
     const list = [
         [ null, 'null' ],
         [ _undefined, 'undefined' ],
@@ -58,8 +58,8 @@ export function getValues(mapper, _undefined) {
         [ Dog, 'class Dog' ],
         [ arrowFunc, 'arrow function expression' ],
         [ funcDef, 'function definition' ],
-        [ () => { return null; }, 'anonymous arrow function' ],
-        [ function () { return null; }, 'anonymous function' ],
+        [ () => { return null }, 'anonymous arrow function' ],
+        [ function () { return null }, 'anonymous function' ],
         [ {}, 'emty Object {}' ],
         [ Object.create(null), 'Object.create(null)' ],
         [ { foo: 'bar' }, '{ foo: "bar" }' ],
@@ -79,7 +79,7 @@ export function getValues(mapper, _undefined) {
         [ /^start/i, '/^start/i' ],
         [ new RegExp('^start', 'i'), 'new RegExp("^start", "i")' ],
     ];
-    /* eslint-enable brace-style, array-bracket-spacing */
+
 
     return list.map(mapper);
 }

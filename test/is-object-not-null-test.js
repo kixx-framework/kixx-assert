@@ -1,7 +1,7 @@
 import {
     AssertionError,
     toFriendlyString,
-    isObjectNotNull
+    isObjectNotNull,
 } from '../mod.js';
 
 import { getValues } from './values.js';
@@ -68,19 +68,19 @@ export default function test_isObjectNotNull() {
 
     if (tests.length !== list.length) {
         throw new AssertionError(
-            `Values length ${ tests.length } is not expected length of ${ list.length }`
+            `Values length ${ tests.length } is not expected length of ${ list.length }`,
         );
     }
 
     tests.forEach(([ val, messageSuffix, expectedResult ]) => {
         if (typeof messageSuffix !== 'string') {
             throw new AssertionError(
-                `Expected messageSuffix ${ toFriendlyString(messageSuffix) } to be a String`
+                `Expected messageSuffix ${ toFriendlyString(messageSuffix) } to be a String`,
             );
         }
         if (typeof expectedResult !== 'boolean') {
             throw new AssertionError(
-                `Expected expectedResult ${ toFriendlyString(expectedResult) } to be a Boolean`
+                `Expected expectedResult ${ toFriendlyString(expectedResult) } to be a Boolean`,
             );
         }
 

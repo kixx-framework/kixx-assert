@@ -433,7 +433,7 @@ export function curryAssertion2(operator, guard) {
     return function curriedAssertion2(expected, actual, messagePrefix) {
         if (arguments.length < 2) {
             return function curriedInnerAssert(_actual, _messagePrefix) {
-                // eslint-disable-next-line no-shadow
+
                 const message = guard(expected, _actual, _messagePrefix);
                 if (message) {
                     throw new AssertionError(message, { operator }, curriedInnerAssert);

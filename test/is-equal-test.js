@@ -1,7 +1,7 @@
 import {
     AssertionError,
     toFriendlyString,
-    isEqual
+    isEqual,
 } from '../mod.js';
 
 
@@ -23,7 +23,7 @@ const symbolB = Symbol('B');
 const bigIntA = BigInt(1);
 const bigIntB = BigInt(2);
 
-/* eslint-disable brace-style, array-bracket-spacing, max-statements-per-line */
+/* eslint-disable max-statements-per-line */
 export const tests = [
     [ 1, 1, 'numbers 1, 1', true ],
     [ 0, 1, 'numbers 0, 1', false ],
@@ -73,22 +73,22 @@ export const tests = [
     [ refA, refA, 'references refA, refA', true],
     [ fnA, fnB, 'references fnA, fnB', false],
     [ fnA, fnA, 'references fnA, fnA', true],
-    [ function () { return null; }, function () { return null; }, 'references function () { return null; }', false],
+    [ function () { return null }, function () { return null }, 'references function () { return null; }', false],
 ];
 
 
-/* eslint-enable brace-style, array-bracket-spacing, max-statements-per-line */
+/* eslint-enable max-statements-per-line */
 export default function test_isEqual() {
 
     tests.forEach(([ a, b, messageSuffix, expectedResult ]) => {
         if (typeof messageSuffix !== 'string') {
             throw new AssertionError(
-                `Expected messageSuffix ${ toFriendlyString(messageSuffix) } to be a String`
+                `Expected messageSuffix ${ toFriendlyString(messageSuffix) } to be a String`,
             );
         }
         if (typeof expectedResult !== 'boolean') {
             throw new AssertionError(
-                `Expected expectedResult ${ toFriendlyString(expectedResult) } to be a Boolean`
+                `Expected expectedResult ${ toFriendlyString(expectedResult) } to be a Boolean`,
             );
         }
 

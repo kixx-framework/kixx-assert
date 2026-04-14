@@ -1,7 +1,7 @@
 import {
     AssertionError,
     toFriendlyString,
-    assertFalsy
+    assertFalsy,
 } from '../mod.js';
 
 import { assertThrowsErrorMessage } from './helpers.js';
@@ -70,19 +70,19 @@ export default function test_assertFalsy() {
 
     if (tests.length !== list.length) {
         throw new AssertionError(
-            `Values length ${ tests.length } is not expected length of ${ list.length }`
+            `Values length ${ tests.length } is not expected length of ${ list.length }`,
         );
     }
 
     tests.forEach(([ val, messageSuffix, expectedToPass ]) => {
         if (typeof messageSuffix !== 'string') {
             throw new AssertionError(
-                `Expected messageSuffix ${ toFriendlyString(messageSuffix) } to be a String`
+                `Expected messageSuffix ${ toFriendlyString(messageSuffix) } to be a String`,
             );
         }
         if (typeof expectedToPass !== 'boolean') {
             throw new AssertionError(
-                `Expected expectedToPass ${ toFriendlyString(expectedToPass) } to be a Boolean`
+                `Expected expectedToPass ${ toFriendlyString(expectedToPass) } to be a Boolean`,
             );
         }
 

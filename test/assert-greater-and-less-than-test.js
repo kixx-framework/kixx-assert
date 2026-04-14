@@ -1,6 +1,6 @@
 import {
     assertGreaterThan,
-    assertLessThan
+    assertLessThan,
 } from '../mod.js';
 
 import { assertThrowsAssertionError } from './helpers.js';

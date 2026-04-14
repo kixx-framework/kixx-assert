@@ -1,7 +1,7 @@
 import {
     AssertionError,
     toFriendlyString,
-    assertNotMatches
+    assertNotMatches,
 } from '../mod.js';
 
 import { assertThrowsErrorMessage } from './helpers.js';
@@ -14,12 +14,12 @@ export default function test_assertNotMatches() {
     tests.forEach(([ matcher, val, messageSuffix, expectedToFail ]) => {
         if (typeof messageSuffix !== 'string') {
             throw new AssertionError(
-                `Expected messageSuffix ${ toFriendlyString(messageSuffix) } to be a String`
+                `Expected messageSuffix ${ toFriendlyString(messageSuffix) } to be a String`,
             );
         }
         if (typeof expectedToFail !== 'boolean') {
             throw new AssertionError(
-                `Expected expectedToPass ${ toFriendlyString(expectedToFail) } to be a Boolean`
+                `Expected expectedToPass ${ toFriendlyString(expectedToFail) } to be a Boolean`,
             );
         }
 

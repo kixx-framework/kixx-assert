@@ -1,7 +1,7 @@
 import {
     AssertionError,
     toFriendlyString,
-    doesMatch
+    doesMatch,
 } from '../mod.js';
 
 const refA = {};
@@ -24,7 +24,7 @@ const bigIntB = BigInt(2);
 
 const arrayA = [ 1, 2, 3 ];
 
-/* eslint-disable brace-style, array-bracket-spacing, max-statements-per-line */
+/* eslint-disable max-statements-per-line */
 export const tests = [
     [ 1, 1, 'numbers 1, 1', true ],
     [ 0, 1, 'numbers 0, 1', false ],
@@ -74,7 +74,7 @@ export const tests = [
     [ refA, refA, 'references refA, refA', true],
     [ fnA, fnB, 'references fnA, fnB', false],
     [ fnA, fnA, 'references fnA, fnA', true],
-    [ function () { return null; }, function () { return null; }, 'references function () { return null; }', false],
+    [ function () { return null }, function () { return null }, 'references function () { return null; }', false],
     [ 'oba', 'foobar', '"oba", "foobar"', true ],
     [ 'foobar', 'foobar', '"foobar", "foobar"', true ],
     [ 'foobar', 'oba', '"foobar", "oba"', false ],
@@ -88,7 +88,7 @@ export const tests = [
     [ 'x', 'foobar', '"x", "foobar"', false ],
     [ '[object Object]', {}, '"[object Object]", {}', false ],
     [ {}, '[object Object]', '{}, "[object Object]"', true ],
-    // eslint-disable-next-line no-useless-escape
+
     [ /\[object object\]/i, {}, '/\[object object\]/i, {}', true ],
     [ 1, [ 1, 2 ], '1, Array [ 1, 2 ]', true ],
     [ 0, [ 1, 2 ], '0, Array [ 1, 2 ]', false ],
@@ -98,7 +98,7 @@ export const tests = [
     [ /^FOO/i, /^FOO/i, '/^FOO/i, /^FOO/i', false ],
     [ 'foo', /^FOO/i, '"foo", /^FOO/i', false ],
 ];
-/* eslint-enable brace-style, array-bracket-spacing, max-statements-per-line */
+/* eslint-enable max-statements-per-line */
 
 
 export default function test_doesMatch() {
@@ -106,12 +106,12 @@ export default function test_doesMatch() {
     tests.forEach(([ matcher, val, messageSuffix, expectedResult ]) => {
         if (typeof messageSuffix !== 'string') {
             throw new AssertionError(
-                `Expected messageSuffix ${ toFriendlyString(messageSuffix) } to be a String`
+                `Expected messageSuffix ${ toFriendlyString(messageSuffix) } to be a String`,
             );
         }
         if (typeof expectedResult !== 'boolean') {
             throw new AssertionError(
-                `Expected expectedResult ${ toFriendlyString(expectedResult) } to be a Boolean`
+                `Expected expectedResult ${ toFriendlyString(expectedResult) } to be a Boolean`,
             );
         }
 
