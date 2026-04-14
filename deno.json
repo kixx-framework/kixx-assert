@@ -1,0 +1,18 @@
+{
+    "name": "@kixx/assert",
+    "version": "1.0.0",
+    "license": "MIT",
+    "exports": "./mod.js",
+    "lint": {
+        "exclude": [
+            ".claude/",
+            "tmp/",
+            "vendor/"
+        ],
+        "rules": {
+            "exclude": [
+                "no-slow-types"
+            ]
+        }
+    }
+}
