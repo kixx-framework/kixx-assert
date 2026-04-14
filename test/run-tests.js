@@ -1,3 +1,4 @@
+import test_AssertionError from './assertion-error-test.js';
 import test_assert from './assert-test.js';
 import test_assertDefined from './assert-defined-test.js';
 import test_assertEqual from './assert-equal-test.js';
@@ -27,6 +28,7 @@ import test_isValidDate from './is-valid-date-test.js';
 import test_toFriendlyString from './to-friendly-string-test.js';
 
 
+test_AssertionError();
 test_assert();
 test_assertDefined();
 test_assertEqual();

@@ -11,6 +11,7 @@
         ],
         "rules": {
             "exclude": [
+                "no-inner-declarations",
                 "no-slow-types"
             ]
         }
