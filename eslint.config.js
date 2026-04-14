@@ -9,6 +9,9 @@ export default [
         languageOptions: {
             ecmaVersion: 2022,
             sourceType: 'module',
+            globals: {
+                Date: 'readonly',
+            },
         },
         rules: {
             'comma-dangle': [
