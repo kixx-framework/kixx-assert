@@ -1,7 +1,7 @@
 {
     "name": "kixx-assert",
-    "version": "2.1.0",
-    "description": "Make assertions in modern JavaScript code",
+    "version": "2.1.1",
+    "description": "Assertion library with an AssertionError class and assertion helpers",
     "type": "module",
     "main": "./mod.js",
     "engines": {

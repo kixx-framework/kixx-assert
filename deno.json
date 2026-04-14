@@ -1,6 +1,7 @@
 {
     "name": "@kixx/assert",
-    "version": "1.0.0",
+    "version": "2.1.1",
+    "description": "Assertion library with an AssertionError class and assertion helpers",
     "license": "MIT",
     "exports": "./mod.js",
     "lint": {
