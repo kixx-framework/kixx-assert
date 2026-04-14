@@ -1,13 +1,6 @@
 /**
- * A helper library for performing assertions which are not native to
- * JavaScript out of the box, or are implemented in unexpected ways.
- *
- * There are generally two groups of functions available in this library:
- *
- * 1. Helper functions which allow you to perform various kinds of type checks
- *    which you wouldn't otherwise find in JavaScript.
- * 2. Assertion functions which throw an AssertionError when the assertion is
- *    not true.
+ * Assertion helpers for runtime type checks and expressive assertion errors.
+ * @module assert
  */
 const protoToString = Object.prototype.toString;
 
@@ -18,9 +11,8 @@ const protoToString = Object.prototype.toString;
 export class AssertionError extends Error {
 
     /**
-     * Creates a new AssertionError instance.
      * @param {string} message - The error message to display.
-     * @param {object} [spec] - Optional specification object with additional error properties.
+     * @param {Object} [spec] - Optional specification object with additional error properties.
      * @param {Error} [spec.cause] - The cause of this error.
      * @param {string} [spec.name] - Custom name for the error.
      * @param {string} [spec.code] - Error code identifier.
@@ -66,6 +58,11 @@ export class AssertionError extends Error {
     }
 }
 
+/**
+ * Default error code used by AssertionError instances.
+ * @name AssertionError.CODE
+ * @type {string}
+ */
 Object.defineProperties(AssertionError, {
     CODE: {
         enumerable: true,
@@ -459,7 +456,7 @@ export function curryAssertion2(operator, guard) {
  * @param {*} actual - The value to test.
  * @param {string} [messagePrefix] - An optional error message prefix string.
  * @throws {AssertionError} When the value is falsy.
- * @returns {true} When the assertion passes.
+ * @returns {void}
  */
 export function assert(actual, messagePrefix) {
     const assertionMessage = `Expected ${ toFriendlyString(actual) } to be truthy`;
@@ -480,7 +477,7 @@ export function assert(actual, messagePrefix) {
  * @param {*} actual - The value to test.
  * @param {string} [messagePrefix] - An optional error message prefix string.
  * @throws {AssertionError} When the value is truthy.
- * @returns {true} When the assertion passes.
+ * @returns {void}
  */
 export function assertFalsy(actual, messagePrefix) {
     const assertionMessage = `Expected ${ toFriendlyString(actual) } to be falsy`;
@@ -586,7 +583,7 @@ export const assertNotMatches = curryAssertion2('assertNotMatches', (matcher, ac
  * @param {*} value - The value to test.
  * @param {string} [messagePrefix] - An optional error message prefix string.
  * @throws {AssertionError} When the value is undefined.
- * @returns {true} When the assertion passes.
+ * @returns {void}
  */
 export function assertDefined(value, messagePrefix) {
     if (isUndefined(value)) {
@@ -608,7 +605,7 @@ export function assertDefined(value, messagePrefix) {
  * @param {*} value - The value to test.
  * @param {string} [messagePrefix] - An optional error message prefix string.
  * @throws {AssertionError} When the value is not undefined.
- * @returns {true} When the assertion passes.
+ * @returns {void}
  */
 export function assertUndefined(value, messagePrefix) {
     if (!isUndefined(value)) {
@@ -630,7 +627,7 @@ export function assertUndefined(value, messagePrefix) {
  * @param {*} value - The value to test.
  * @param {string} [messagePrefix] - An optional error message prefix string.
  * @throws {AssertionError} When the value is not a non-empty String.
- * @returns {true} When the assertion passes.
+ * @returns {void}
  */
 export function assertNonEmptyString(value, messagePrefix) {
     if (!isNonEmptyString(value)) {
@@ -652,7 +649,7 @@ export function assertNonEmptyString(value, messagePrefix) {
  * @param {*} value - The value to test.
  * @param {string} [messagePrefix] - An optional error message prefix string.
  * @throws {AssertionError} When the value is not a Number or is NaN.
- * @returns {true} When the assertion passes.
+ * @returns {void}
  */
 export function assertNumberNotNaN(value, messagePrefix) {
     if (!isNumberNotNaN(value)) {
@@ -673,7 +670,7 @@ export function assertNumberNotNaN(value, messagePrefix) {
  * @param {*} value - The value to test.
  * @param {string} [messagePrefix] - An optional error message prefix string.
  * @throws {AssertionError} When the value is not an Array.
- * @returns {true} When the assertion passes.
+ * @returns {void}
  */
 export function assertArray(value, messagePrefix) {
     if (!Array.isArray(value)) {
@@ -695,7 +692,7 @@ export function assertArray(value, messagePrefix) {
  * @param {*} value - The value to test.
  * @param {string} [messagePrefix] - An optional error message prefix string.
  * @throws {AssertionError} When the value is not a Boolean.
- * @returns {true} When the assertion passes.
+ * @returns {void}
  */
 export function assertBoolean(value, messagePrefix) {
     if (!isBoolean(value)) {
@@ -717,7 +714,7 @@ export function assertBoolean(value, messagePrefix) {
  * @param {*} value - The value to test.
  * @param {string} [messagePrefix] - An optional error message prefix string.
  * @throws {AssertionError} When the value is not a Function.
- * @returns {true} When the assertion passes.
+ * @returns {void}
  */
 export function assertFunction(value, messagePrefix) {
     if (!isFunction(value)) {
@@ -739,7 +736,7 @@ export function assertFunction(value, messagePrefix) {
  * @param {*} value - The value to test.
  * @param {string} [messagePrefix] - An optional error message prefix string.
  * @throws {AssertionError} When the value is not a valid Date.
- * @returns {true} When the assertion passes.
+ * @returns {void}
  */
 export function assertValidDate(value, messagePrefix) {
     if (!isValidDate(value)) {
@@ -761,7 +758,7 @@ export function assertValidDate(value, messagePrefix) {
  * @param {*} value - The value to test.
  * @param {string} [messagePrefix] - An optional error message prefix string.
  * @throws {AssertionError} When the value is not a RegExp.
- * @returns {true} When the assertion passes.
+ * @returns {void}
  */
 export function assertRegExp(value, messagePrefix) {
     if (!isRegExp(value)) {

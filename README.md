@@ -18,10 +18,6 @@ This library is designed for use in an ES6 module environment requiring __Node.j
 
 If you're curious: Node.js >= 16.13.2 is required for [ES6 module stabilization](https://nodejs.org/dist/latest-v18.x/docs/api/esm.html#modules-ecmascript-modules) and [ES2022 support](https://node.green/#ES2020).
 
-Please don't bother running benchmarks on this library. Correctness and readability are design objectives. Conserving CPU cycles is not. It is very unlikely any utilities in this library would have a measurable performance impact on your application, and if they did you should probably be implementing something more optimized to your specific use case.
-
-__Note:__ There is no TypeScript here. It would be waste of time for a library as small as this.
-
 ## Usage
 ```js
 // In Node.js:
@@ -418,6 +414,7 @@ See [isValidDate()](#isvaliddate).
 See [isRegExp()](#isregexp).
 
 ### assertGreaterThan
+Compares values using JavaScript's `>` / `<=` semantics.
 If the subject is less than or equal to the control the test will fail.
 
 Can be curried.
@@ -438,6 +435,7 @@ assertGreaterThan100(99); // Will throw an AssertionError
 ```
 
 ### assertLessThan
+Compares values using JavaScript's `<` / `>=` semantics.
 If the subject is greater than or equal to the control the test will fail.
 
 Can be curried.
