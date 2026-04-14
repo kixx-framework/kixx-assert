@@ -81,13 +81,7 @@ deno lint
 Run just the tests with:
 
 ```bash
-node run-tests.js
-```
-
-Or, to target a specific test suite by directory or file name, pass in the pathname:
-
-```bash
-node run-tests.js <pathname>
+node ./test/run-tests.js
 ```
 
 ## Code Style

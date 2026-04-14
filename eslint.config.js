@@ -7,14 +7,8 @@ export default [
             'vendor/',
         ],
         languageOptions: {
-            ecmaVersion: 2025,
+            ecmaVersion: 2022,
             sourceType: 'module',
-            globals: {
-                Date: 'readonly',
-                setTimeout: 'readonly',
-                console: 'readonly',
-                structuredClone: 'readonly',
-            },
         },
         rules: {
             'comma-dangle': [
