@@ -82,6 +82,7 @@ Run just the tests with:
 
 ```bash
 node ./test/run-tests.js
+deno run ./test/run-tests.js
 ```
 
 ## Code Style
