@@ -60,7 +60,7 @@ export class AssertionError extends Error {
             });
         }
 
-        if (typeof sourceFunction === 'function') {
+        if (Error.captureStackTrace && typeof sourceFunction === 'function') {
             Error.captureStackTrace(this, sourceFunction);
         }
     }
